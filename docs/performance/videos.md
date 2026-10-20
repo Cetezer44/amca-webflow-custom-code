@@ -30,7 +30,8 @@ ffmpeg -i NOM-poster.jpg -c:v libwebp -quality 72 NOM-poster.webp
 ## Comportement
 
 - Aucune vidéo n'est téléchargée au chargement de la page : seul le poster s'affiche.
-- Bandeaux (`data-amca-load="idle"`) : la vidéo démarre après l'événement `load`. Le bandeau de l'accueil est masqué en CSS (`.showreel_embed.showreel-home`) : il n'est jamais chargé.
+- Bandeau de /les-formations : lecture dès l'affichage (sans `data-amca-load`). Avec `idle` (après le `load`), sa première image devenait le LCP mobile (5,3 s contre 4,3 s).
+- Bandeau de l'accueil (`data-amca-load="idle"`) : masqué en CSS (`.showreel_embed.showreel-home`), il n'est jamais chargé.
 - Showreel et vidéo campus : chargées à 200 px de l'écran, mises en pause en le quittant.
 - Bouton play de la vidéo campus : relance depuis le début (`src/js/pages/campus-video.js`).
 - « Réduire les animations » (système) : pas de lecture automatique.
