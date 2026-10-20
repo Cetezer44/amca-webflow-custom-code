@@ -1,0 +1,218 @@
+[
+  {
+    "file": "01-icon-1x1-small.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cba4",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small"
+    ]
+  },
+  {
+    "file": "02-icon-1x1-small-black.html",
+    "element_id": "f1fb5095-dd2d-55ba-6a3a-cbc0ede91361",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "03-icon-1x1-small.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd39",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small"
+    ]
+  },
+  {
+    "file": "04-icon-1x1-small.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd3a",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small"
+    ]
+  },
+  {
+    "file": "05-icon-1x1-small.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd3b",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small"
+    ]
+  },
+  {
+    "file": "06-icon-1x1-small.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd3c",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small"
+    ]
+  },
+  {
+    "file": "07-icon-1x1-small.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd3d",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small"
+    ]
+  },
+  {
+    "file": "08-icon-1x1-small.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd3e",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small"
+    ]
+  },
+  {
+    "file": "09-icon-1x1-small.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd3f",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small"
+    ]
+  },
+  {
+    "file": "10-icon-1x1-small.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd40",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small"
+    ]
+  },
+  {
+    "file": "11-icon-1x1-small.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd41",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-small"
+    ]
+  },
+  {
+    "file": "12-icon-1x1-medium.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd46",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-medium"
+    ]
+  },
+  {
+    "file": "13-icon-1x1-medium.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd47",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-medium"
+    ]
+  },
+  {
+    "file": "14-icon-1x1-medium.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd48",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-medium"
+    ]
+  },
+  {
+    "file": "15-icon-1x1-medium.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd49",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-medium"
+    ]
+  },
+  {
+    "file": "16-icon-1x1-medium.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd4a",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-medium"
+    ]
+  },
+  {
+    "file": "17-icon-1x1-medium.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd4b",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-medium"
+    ]
+  },
+  {
+    "file": "18-icon-1x1-medium.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd4c",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-medium"
+    ]
+  },
+  {
+    "file": "19-icon-1x1-medium.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd4d",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-medium"
+    ]
+  },
+  {
+    "file": "20-icon-1x1-large.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd52",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-large"
+    ]
+  },
+  {
+    "file": "21-icon-1x1-large.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd53",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-large"
+    ]
+  },
+  {
+    "file": "22-icon-1x1-large.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd54",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-large"
+    ]
+  },
+  {
+    "file": "23-icon-1x1-large.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd55",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-large"
+    ]
+  },
+  {
+    "file": "24-icon-1x1-large.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd56",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-large"
+    ]
+  },
+  {
+    "file": "25-icon-1x1-large.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd57",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-large"
+    ]
+  },
+  {
+    "file": "26-icon-1x1-large.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd58",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-large"
+    ]
+  },
+  {
+    "file": "27-icon-1x1-large.html",
+    "element_id": "32eadc24-e391-a089-abe0-fb5b6627cd59",
+    "component": "6891bc152fe7a0afbf690736",
+    "classes": [
+      "icon-1x1-large"
+    ]
+  }
+]

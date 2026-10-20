@@ -1,0 +1,26 @@
+[
+  {
+    "file": "01-icon-1x1-small-black.html",
+    "element_id": "552be21c-0b1a-cf29-bc05-4ab0f262f524",
+    "component": "6891bc152fe7a0afbf6907cb",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "02-icon-1x1-small-black.html",
+    "element_id": "f2af4188-2c82-c429-3ce9-903ed6179113",
+    "component": "6891bc152fe7a0afbf6907cb",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "03-styles-upload.html",
+    "element_id": "023f3fb5-f9da-ea3a-8630-2e5331cbfb72",
+    "component": "6891bc152fe7a0afbf6907cb",
+    "classes": [
+      "styles-upload"
+    ]
+  }
+]

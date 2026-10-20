@@ -1,0 +1,34 @@
+[
+  {
+    "file": "01-menu-active.html",
+    "element_id": "6087d0b5-ca88-e80f-998d-2c8fb63968cf",
+    "component": "6891bc152fe7a0afbf690748",
+    "classes": [
+      "menu-active"
+    ]
+  },
+  {
+    "file": "02-icon-1x1-small-black.html",
+    "element_id": "6087d0b5-ca88-e80f-998d-2c8fb63968d2",
+    "component": "6891bc152fe7a0afbf690748",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "03-icon-1x1-small-black.html",
+    "element_id": "6087d0b5-ca88-e80f-998d-2c8fb63968d6",
+    "component": "6891bc152fe7a0afbf690748",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "04-icon-arrow-right.html",
+    "element_id": "90d29053-fc42-3b39-e0af-74b78fb3d14f",
+    "component": "6891bc152fe7a0afbf690748",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  }
+]

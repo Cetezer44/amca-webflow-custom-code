@@ -1,0 +1,18 @@
+[
+  {
+    "file": "01-icon-arrow-right-white.html",
+    "element_id": "d315e13f-b8b1-9144-d87d-0e52adeb39d9",
+    "component": "d315e13f-b8b1-9144-d87d-0e52adeb39cc",
+    "classes": [
+      "icon-arrow-right-white"
+    ]
+  },
+  {
+    "file": "02-anim-block-po.html",
+    "element_id": "1c53fa56-a8fa-315b-0614-255992715a78",
+    "component": "d315e13f-b8b1-9144-d87d-0e52adeb39cc",
+    "classes": [
+      "anim-block-po"
+    ]
+  }
+]

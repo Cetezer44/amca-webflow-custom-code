@@ -1,0 +1,18 @@
+[
+  {
+    "file": "01-icon-arrow-right.html",
+    "element_id": "f1f67df8-7fed-4815-1be5-e5d2c494b053",
+    "component": "15531ba1-b384-a2d5-09f9-23697a956cbc",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "02-icon-arrow-right.html",
+    "element_id": "d2b44dae-b365-41d7-2dcb-433351c64f54",
+    "component": "15531ba1-b384-a2d5-09f9-23697a956cbc",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  }
+]

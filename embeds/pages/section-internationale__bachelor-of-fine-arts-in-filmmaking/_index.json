@@ -1,0 +1,98 @@
+[
+  {
+    "file": "01-icon-1x1-small-black.html",
+    "element_id": "551d1e4d-9202-70da-28cd-4b6695b25ad6",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "02-icon-1x1-small-black.html",
+    "element_id": "551d1e4d-9202-70da-28cd-4b6695b25ada",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "03-icon-arrow-right.html",
+    "element_id": "bafa587b-20dc-6af7-d5ae-db956d7149e5",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "04-icon-arrow-right.html",
+    "element_id": "f431f38a-4141-8968-360e-128ac881c39b",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "05-slider-fade-embed.html",
+    "element_id": "f6b5a44e-726e-9270-3c10-34c144b57b43",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "slider-fade-embed"
+    ]
+  },
+  {
+    "file": "06-icon-plus.html",
+    "element_id": "7be39a8a-36d3-6f08-2e32-9cc229c3883b",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "07-icon-plus.html",
+    "element_id": "7be39a8a-36d3-6f08-2e32-9cc229c3884e",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "08-icon-plus.html",
+    "element_id": "7be39a8a-36d3-6f08-2e32-9cc229c38861",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "09-icon-plus.html",
+    "element_id": "7be39a8a-36d3-6f08-2e32-9cc229c38874",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "10-icon-arrow-right.html",
+    "element_id": "35b9e3b0-a232-5eb7-4ec7-e4e9a75d93ae",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "11-icon-arrow-right.html",
+    "element_id": "9ccb4b5b-f0cb-50f7-258b-e9b3b81d13be",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "12-icon-arrow-right.html",
+    "element_id": "9ccb4b5b-f0cb-50f7-258b-e9b3b81d13ce",
+    "component": "69cd796d6c5a15c92e947bfc",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  }
+]

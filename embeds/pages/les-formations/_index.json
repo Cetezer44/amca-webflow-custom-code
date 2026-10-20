@@ -1,0 +1,157 @@
+[
+  {
+    "file": "01-icon-arrow-right.html",
+    "element_id": "163aace1-1803-c4e2-3264-422d43d8a019",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "02-showreel-embed.html",
+    "element_id": "23cb14d6-1b87-969a-96ad-5e057ec9343b",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "showreel_embed"
+    ]
+  },
+  {
+    "file": "03-embed-marquee.html",
+    "element_id": "23cb14d6-1b87-969a-96ad-5e057ec93455",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "embed-marquee"
+    ]
+  },
+  {
+    "file": "04-icon-arrow-right.html",
+    "element_id": "23cb14d6-1b87-969a-96ad-5e057ec93462",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "05-media-query-image-purple-block.html",
+    "element_id": "23cb14d6-1b87-969a-96ad-5e057ec93467",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "media-query-image-purple-block"
+    ]
+  },
+  {
+    "file": "06-icon-arrow-right.html",
+    "element_id": "23cb14d6-1b87-969a-96ad-5e057ec93474",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "07-icon-arrow-right.html",
+    "element_id": "23cb14d6-1b87-969a-96ad-5e057ec934ac",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-arrow-right",
+      "Dark  / Sans CTA 16"
+    ]
+  },
+  {
+    "file": "08-icon-arrow-right.html",
+    "element_id": "23cb14d6-1b87-969a-96ad-5e057ec934b1",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-arrow-right",
+      "Dark  / Sans CTA 16"
+    ]
+  },
+  {
+    "file": "09-icon-1x1-small-black.html",
+    "element_id": "7a32ea6f-e86f-69a1-081c-2cdc4bca6ee6",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "10-icon-1x1-small-black.html",
+    "element_id": "76523929-0174-a034-394e-6f3c2541725c",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "11-icon-arrow-right.html",
+    "element_id": "10686e8d-864c-5c44-ca08-0d90a669dc58",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "12-icon-1x1-small-black.html",
+    "element_id": "23cb14d6-1b87-969a-96ad-5e057ec934da",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "13-icon-1x1-small-black.html",
+    "element_id": "23cb14d6-1b87-969a-96ad-5e057ec93513",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "14-icon-arrow-right.html",
+    "element_id": "23cb14d6-1b87-969a-96ad-5e057ec93530",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-arrow-right",
+      "Violet / Dark Background 9"
+    ]
+  },
+  {
+    "file": "15-icon-arrow-right.html",
+    "element_id": "9310a9ee-c34b-2959-e865-5d43ed88a7e0",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "16-icon-arrow-right.html",
+    "element_id": "9310a9ee-c34b-2959-e865-5d43ed88a7f0",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "17-icon-arrow-right-white.html",
+    "element_id": "6d4327b0-3943-0d2c-b1ba-634dd66ae280",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "icon-arrow-right-white"
+    ]
+  },
+  {
+    "file": "18-embed-styles-media-height.html",
+    "element_id": "62b1854b-9bb7-e144-fa16-74b3183bb0ed",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "embed-styles-media-height"
+    ]
+  },
+  {
+    "file": "19-anim-block-formations.html",
+    "element_id": "82a659f4-86ac-9bcd-ce78-9649d77d2052",
+    "component": "69c385498a002ac60c750524",
+    "classes": [
+      "anim-block-formations"
+    ]
+  }
+]

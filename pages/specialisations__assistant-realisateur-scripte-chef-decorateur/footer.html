@@ -1,0 +1,70 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const OFFSET = 170;
+    const DURATION = 600; // en ms – tu peux augmenter pour un scroll encore plus lent
+    const navLinks = document.querySelectorAll(".navlink-specialisation");
+
+    // Fonction de scroll animée
+    function smoothScrollTo(to, duration = 500) {
+      const start = window.scrollY;
+      const change = to - start;
+      const startTime = performance.now();
+
+      function animateScroll(currentTime) {
+        const elapsed = currentTime - startTime;
+        const t = Math.min(elapsed / duration, 1); // entre 0 et 1
+        const ease = t < 0.5
+          ? 2 * t * t
+          : -1 + (4 - 2 * t) * t; // easing: easeInOutQuad
+
+        window.scrollTo(0, start + change * ease);
+
+        if (elapsed < duration) {
+          requestAnimationFrame(animateScroll);
+        }
+      }
+
+      requestAnimationFrame(animateScroll);
+    }
+
+    // Clic sur les liens
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("data-target");
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          const targetY = targetSection.getBoundingClientRect().top + window.scrollY - OFFSET;
+          smoothScrollTo(targetY, DURATION);
+        }
+      });
+    });
+
+    // Mise à jour de .active
+    function updateActiveLink() {
+      let currentLink = null;
+      let closest = Infinity;
+
+      navLinks.forEach(link => {
+        const targetId = link.getAttribute("data-target");
+        const section = document.getElementById(targetId);
+        if (section) {
+          const adjustedTop = section.getBoundingClientRect().top - OFFSET;
+          const distance = Math.abs(adjustedTop);
+          if (adjustedTop <= 0 && distance < closest) {
+            closest = distance;
+            currentLink = link;
+          }
+        }
+      });
+
+      navLinks.forEach(link => link.classList.remove("active"));
+      if (currentLink) currentLink.classList.add("active");
+    }
+
+    window.addEventListener("scroll", updateActiveLink);
+    window.addEventListener("resize", updateActiveLink);
+    updateActiveLink();
+  });
+</script>

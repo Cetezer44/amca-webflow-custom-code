@@ -1,0 +1,66 @@
+[
+  {
+    "file": "01-icon-1x1-small-black.html",
+    "element_id": "dd79edaf-1c45-400b-6145-efe97efe4cf1",
+    "component": "69cd8326585c8804832c5d82",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "02-icon-1x1-small-black.html",
+    "element_id": "dd79edaf-1c45-400b-6145-efe97efe4cf5",
+    "component": "69cd8326585c8804832c5d82",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "03-icon-arrow-right.html",
+    "element_id": "157fec83-0dec-e462-1dac-21cb5199c5c2",
+    "component": "69cd8326585c8804832c5d82",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "04-icon-plus.html",
+    "element_id": "0e1ff3af-bd48-a00c-ac07-0db1b3fb37b5",
+    "component": "69cd8326585c8804832c5d82",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "05-icon-plus.html",
+    "element_id": "0e1ff3af-bd48-a00c-ac07-0db1b3fb37bf",
+    "component": "69cd8326585c8804832c5d82",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "06-icon-plus.html",
+    "element_id": "0e1ff3af-bd48-a00c-ac07-0db1b3fb37c9",
+    "component": "69cd8326585c8804832c5d82",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "07-icon-plus.html",
+    "element_id": "0e1ff3af-bd48-a00c-ac07-0db1b3fb37d3",
+    "component": "69cd8326585c8804832c5d82",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "08-padding-faq.html",
+    "element_id": "e3ecf5a3-ebf1-ff1c-fdb0-27e9ad860b34",
+    "component": "69cd8326585c8804832c5d82",
+    "classes": [
+      "padding-faq"
+    ]
+  }
+]

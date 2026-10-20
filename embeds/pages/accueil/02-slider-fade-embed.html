@@ -1,0 +1,37 @@
+<!-- AMCA — Slider hero infini avec transition en fondu (fade) -->
+<!-- Cible la div .slider-hero-hp et ses images .img-amca (structure déjà en place sur le site) -->
+
+<style>
+  .slider-hero-hp .img-amca {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    will-change: opacity;
+  }
+  .slider-hero-hp .img-amca.is-active {
+    opacity: 1;
+    z-index: 1;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var DURATION = 4000; // durée d'affichage de chaque image, en ms (avant de passer à la suivante)
+
+    document.querySelectorAll('.slider-hero-hp').forEach(function (slider) {
+      var images = slider.querySelectorAll('.img-amca');
+      if (images.length < 2) return; // rien à faire s'il n'y a pas au moins 2 images
+
+      var index = 0;
+      images.forEach(function (img) { img.classList.remove('is-active'); });
+      images[0].classList.add('is-active');
+
+      setInterval(function () {
+        var current = images[index];
+        index = (index + 1) % images.length; // boucle infinie
+        var next = images[index];
+        current.classList.remove('is-active');
+        next.classList.add('is-active');
+      }, DURATION);
+    });
+  });
+</script>

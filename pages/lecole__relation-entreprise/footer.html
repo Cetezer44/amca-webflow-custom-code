@@ -1,0 +1,15 @@
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<!-- Langue FR -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    flatpickr(".custom-date-input", {
+      dateFormat: "d/m/Y", // Format JJ/MM/AAAA
+      minDate: "today",    // Dates passées interdites
+      locale: "fr"         // Activation de la langue française
+    });
+  });
+</script>

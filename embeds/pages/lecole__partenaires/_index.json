@@ -1,0 +1,18 @@
+[
+  {
+    "file": "01-icon-arrow-right.html",
+    "element_id": "1ea8283a-43de-ad3b-240e-62d85da87c43",
+    "component": "68b01542f3d03664fa00928c",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "02-animation-modal.html",
+    "element_id": "b6d69c58-6de8-9991-b32e-4a9d03bdcac4",
+    "component": "68b01542f3d03664fa00928c",
+    "classes": [
+      "animation-modal"
+    ]
+  }
+]

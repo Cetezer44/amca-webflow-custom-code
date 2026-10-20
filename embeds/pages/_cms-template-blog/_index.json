@@ -1,0 +1,66 @@
+[
+  {
+    "file": "01-icon-1x1-small-black.html",
+    "element_id": "22ea5a32-0ef9-7265-9f6c-8dd495b43436",
+    "component": "6891bc152fe7a0afbf69073a",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "02-icon-1x1-small-black.html",
+    "element_id": "22ea5a32-0ef9-7265-9f6c-8dd495b4343a",
+    "component": "6891bc152fe7a0afbf69073a",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "03-icon-arrow-bottom.html",
+    "element_id": "1ab5a097-29c4-bfbc-f26c-3c3b7abe3e37",
+    "component": "6891bc152fe7a0afbf69073a",
+    "classes": [
+      "icon-arrow-bottom"
+    ]
+  },
+  {
+    "file": "04-embed-figure-rt.html",
+    "element_id": "782dcb33-6caa-c0bc-2c77-20e68d0ce71c",
+    "component": "6891bc152fe7a0afbf69073a",
+    "classes": [
+      "embed-figure-rt"
+    ]
+  },
+  {
+    "file": "05-icon-arrow-right.html",
+    "element_id": "bad0ad72-3ecd-f2ca-b410-cc788242409d",
+    "component": "6891bc152fe7a0afbf69073a",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "06-icon-arrow-right.html",
+    "element_id": "bad0ad72-3ecd-f2ca-b410-cc78824240ae",
+    "component": "6891bc152fe7a0afbf69073a",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "07-icon-arrow-right.html",
+    "element_id": "d104cbec-95a6-30a0-d61d-3127c4ebbca6",
+    "component": "6891bc152fe7a0afbf69073a",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "08-margin-toolbar.html",
+    "element_id": "03713416-9ba8-436a-9e45-e134b1101ed4",
+    "component": "6891bc152fe7a0afbf69073a",
+    "classes": [
+      "margin-toolbar"
+    ]
+  }
+]

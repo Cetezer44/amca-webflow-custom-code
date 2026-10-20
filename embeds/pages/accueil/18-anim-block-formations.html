@@ -1,0 +1,19 @@
+<style>
+  .featured_actu_block_formations {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .featured_actu_block_formations.is-visible {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var el = document.querySelector(".featured_actu_block_formations");
+    if (!el) return;
+    setTimeout(function () {
+      el.classList.add("is-visible");
+    }, 3000);
+  });
+</script>

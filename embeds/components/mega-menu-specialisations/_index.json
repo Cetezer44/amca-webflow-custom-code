@@ -1,0 +1,50 @@
+[
+  {
+    "file": "01-icon-plus.html",
+    "element_id": "5e83ad05-e94b-d1dc-d060-33a571274669",
+    "component": "5e83ad05-e94b-d1dc-d060-33a57127465d",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "02-icon-plus.html",
+    "element_id": "5e83ad05-e94b-d1dc-d060-33a57127466e",
+    "component": "5e83ad05-e94b-d1dc-d060-33a57127465d",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "03-icon-plus.html",
+    "element_id": "5e83ad05-e94b-d1dc-d060-33a571274673",
+    "component": "5e83ad05-e94b-d1dc-d060-33a57127465d",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "04-icon-plus.html",
+    "element_id": "5e83ad05-e94b-d1dc-d060-33a571274678",
+    "component": "5e83ad05-e94b-d1dc-d060-33a57127465d",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "05-icon-plus.html",
+    "element_id": "5e83ad05-e94b-d1dc-d060-33a57127467d",
+    "component": "5e83ad05-e94b-d1dc-d060-33a57127465d",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "06-icon-plus.html",
+    "element_id": "b86241b0-ae41-afbe-40d3-ea6ca63517fe",
+    "component": "5e83ad05-e94b-d1dc-d060-33a57127465d",
+    "classes": [
+      "icon-plus"
+    ]
+  }
+]

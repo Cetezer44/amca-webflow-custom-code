@@ -1,0 +1,79 @@
+<style>
+/* ====== Conteneur ====== */
+.bandeau-marquee-infos {
+  position: relative;
+  overflow-x: auto;                 /* scroll horizontal tactile */
+  -webkit-overflow-scrolling: touch;/* inertie iOS */
+  scrollbar-width: none;            /* masque la scrollbar (Firefox) */
+  white-space: nowrap;              /* sécurité si styles externes */
+}
+.bandeau-marquee-infos::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+/* ====== Rail interne (créé en JS) ====== */
+.bandeau-marquee-infos .marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Items */
+.bandeau-marquee-infos .marquee-text-bandeau-infos {
+  flex: 0 0 auto;
+  min-width: 300px;    /* ajuste à ton design */
+  margin-right: 1rem;  /* espacement horizontal */
+}
+
+/* Animation auto uniquement ≥ 768px */
+@media (min-width: 768px) {
+  .bandeau-marquee-infos .marquee-track {
+    animation: marquee-infos 40s linear infinite;
+  }
+}
+
+/* La durée (40s) est à ajuster selon la longueur de contenu */
+@keyframes marquee-infos {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); } /* 3 copies → -33.333% */
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".bandeau-marquee-infos");
+  if (!container) return;
+
+  // Récupère les items existants (enfants directs)
+  const originalItems = Array.from(container.querySelectorAll(":scope > .marquee-text-bandeau-infos"));
+  if (!originalItems.length) return;
+
+  // Crée le rail et déplace les items dedans
+  const track = document.createElement("div");
+  track.className = "marquee-track";
+
+  originalItems.forEach(el => track.appendChild(el)); // déplace (pas clone)
+
+  // Duplique la liste complète 2× (total = 3 blocs → -33.333% dans @keyframes)
+  for (let i = 0; i < 2; i++) {
+    originalItems.forEach((el) => {
+      const clone = el.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true"); // accessibilité : on masque les clones
+      track.appendChild(clone);
+    });
+  }
+
+  // Insère le rail dans le conteneur
+  container.appendChild(track);
+
+  // Optionnel : si le contenu est très court, accélérer/reduire la durée selon la largeur
+  // (dé-commente si tu veux une durée dynamique)
+  /*
+  const resize = () => {
+    const ratio = track.scrollWidth / window.innerWidth;
+    const base = 40; // secondes
+    track.style.animationDuration = Math.max(20, base * Math.min(ratio, 4)) + "s";
+  };
+  window.addEventListener("resize", resize);
+  resize();
+  */
+});
+</script>

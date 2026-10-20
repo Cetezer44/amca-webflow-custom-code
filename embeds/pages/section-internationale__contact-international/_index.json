@@ -1,0 +1,74 @@
+[
+  {
+    "file": "01-icon-1x1-small-black.html",
+    "element_id": "8115e5fa-bb5e-81f3-d746-e205aa0b5fd9",
+    "component": "69cd84030e9a2f87d8337c27",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "02-icon-1x1-small-black.html",
+    "element_id": "8115e5fa-bb5e-81f3-d746-e205aa0b5fdd",
+    "component": "69cd84030e9a2f87d8337c27",
+    "classes": [
+      "icon-1x1-small-black"
+    ]
+  },
+  {
+    "file": "03-icon-plus.html",
+    "element_id": "d2cf6952-a438-b701-a2f7-28973b77c65a",
+    "component": "69cd84030e9a2f87d8337c27",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "04-icon-plus.html",
+    "element_id": "d2cf6952-a438-b701-a2f7-28973b77c664",
+    "component": "69cd84030e9a2f87d8337c27",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "05-icon-plus.html",
+    "element_id": "d2cf6952-a438-b701-a2f7-28973b77c66e",
+    "component": "69cd84030e9a2f87d8337c27",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "06-icon-plus.html",
+    "element_id": "d2cf6952-a438-b701-a2f7-28973b77c678",
+    "component": "69cd84030e9a2f87d8337c27",
+    "classes": [
+      "icon-plus"
+    ]
+  },
+  {
+    "file": "07-icon-arrow-right.html",
+    "element_id": "8c243da0-1812-5c11-effd-447aeddc40d5",
+    "component": "69cd84030e9a2f87d8337c27",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "08-icon-arrow-right.html",
+    "element_id": "ac665f39-18ba-803d-454b-8e801969a912",
+    "component": "69cd84030e9a2f87d8337c27",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  },
+  {
+    "file": "09-icon-arrow-right.html",
+    "element_id": "ac665f39-18ba-803d-454b-8e801969a922",
+    "component": "69cd84030e9a2f87d8337c27",
+    "classes": [
+      "icon-arrow-right"
+    ]
+  }
+]

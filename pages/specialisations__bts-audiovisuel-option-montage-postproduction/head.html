@@ -1,0 +1,21 @@
+<style>
+html { scroll-behavior: auto; }
+/* Équivalent de la classe "Body" des autres pages (à retirer si la classe est ajoutée au Body dans le Designer) */
+body { font-size: 0.9rem; background-color: #151516; }
+.bts-toolbar-tab { transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease; }
+.bts-toolbar-tab.active, .bts-toolbar-tab:hover { background-color: rgba(241, 188, 223, 0.3); border-color: transparent; color: #f4f4f9; }
+.bts-toolbar-tabs::-webkit-scrollbar { display: none; }
+.bts-tab-link { transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease; }
+.bts-tab-link.is-active { background-color: #d91b47; border-color: #d91b47; color: #f4f4f9; }
+.w-mod-js [data-bts-tabs] [data-bts-panel]:not(.is-active) { display: none; }
+.w-mod-js [data-bts-acc]:not(.is-open) .bts-acc-body { display: none; }
+.bts-section-dark .button.is-icon-white::before, .bts-btn-dark::before { content: "\2192"; margin-right: 0.5rem; }
+/* Formulaire candidature */
+.bts-input:focus { border-color: #d91b47; outline: none; }
+select.bts-input { -webkit-appearance: none; appearance: none; padding-right: 2.5rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0h10L5 6z' fill='%23151516'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 18px center; background-size: 7px 5px; cursor: pointer; }
+select.bts-input:invalid { color: #8f93ac; }
+select.bts-input option { color: #151516; }
+.bts-checkbox-input::before, .bts-checkbox-input::after { display: none; }
+.bts-checkbox input[type="checkbox"] { flex: none; float: none; width: 16px; height: 16px; margin: 1px 0 0; border: 1px solid #151516; border-radius: 0; }
+.bts-submit:hover { background-color: #b8163c; }
+</style>

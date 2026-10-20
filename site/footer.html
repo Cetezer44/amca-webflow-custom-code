@@ -1,0 +1,256 @@
+<!-- [Vimeo Player] -->
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+<!-- [JQuery] -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<!-- [Attributes by Finsweet] Auto Video -->
+<script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-autovideo@1/autovideo.js"></script>
+
+<!-- [Mega Menu -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    var ecoleTrigger = document.querySelector(".ecole-dd-mega-menu");
+    var ecoleMenu = document.querySelector(".mega-menu-ecole-container");
+    var programmeTrigger = document.querySelector(".programme-dd-mega-menu");
+    var programmeMenu = document.querySelector(".mega-menu-programme-container");
+    var speTrigger = document.querySelector(".spe-dd-mega-menu");
+    var speMenu = document.querySelector(".mega-menu-spe-container");
+    var formTrigger = document.querySelector(".form-dd-mega-menu");
+    var formMenu = document.querySelector(".mega-menu-form-container");
+
+    if (!ecoleTrigger || !ecoleMenu || !programmeTrigger || !programmeMenu || !speTrigger || !speMenu || !formTrigger || !formMenu) return;
+
+    var closeTimeout;
+
+    var menus = [
+      { trigger: ecoleTrigger, menu: ecoleMenu, visible: false },
+      { trigger: programmeTrigger, menu: programmeMenu, visible: false },
+      { trigger: speTrigger, menu: speMenu, visible: false },
+      { trigger: formTrigger, menu: formMenu, visible: false },
+    ];
+
+    function openMenu(entry) {
+      clearTimeout(closeTimeout);
+      menus.forEach(function (m) {
+        if (m !== entry && m.visible) {
+          m.visible = false;
+          m.menu.classList.remove("active");
+          m.menu.style.display = "none";
+        }
+      });
+      if (entry.visible) return;
+      entry.visible = true;
+      entry.menu.style.display = "flex";
+      requestAnimationFrame(function () {
+        entry.menu.classList.add("active");
+      });
+    }
+
+    function closeMenu(entry) {
+      if (!entry.visible) return;
+      entry.visible = false;
+      entry.menu.classList.remove("active");
+      closeTimeout = setTimeout(function () {
+        if (!entry.visible) {
+          entry.menu.style.display = "none";
+        }
+      }, 200);
+    }
+
+    function closeAllMenus() {
+      clearTimeout(closeTimeout);
+      menus.forEach(function (m) {
+        if (m.visible) {
+          m.visible = false;
+          m.menu.classList.remove("active");
+          m.menu.style.display = "none";
+        }
+      });
+    }
+
+    menus.forEach(function (entry) {
+      entry.trigger.addEventListener("mouseenter", function () {
+        openMenu(entry);
+      });
+
+      entry.menu.addEventListener("mouseenter", function () {
+        clearTimeout(closeTimeout);
+      });
+
+      entry.menu.addEventListener("mouseleave", function () {
+        closeMenu(entry);
+      });
+    });
+
+    [".close-mega-menu", ".nav_brand", ".flex_cta_header"].forEach(function (selector) {
+      document.querySelectorAll(selector).forEach(function (el) {
+        el.addEventListener("mouseenter", closeAllMenus);
+      });
+    });
+
+    document.querySelectorAll(".nav_menu_link").forEach(function (el) {
+      var isInMegaMenu = menus.some(function (m) { return m.menu.contains(el); });
+      var isTrigger = menus.some(function (m) { return m.trigger === el || m.trigger.contains(el); });
+      if (!isInMegaMenu && !isTrigger) {
+        el.addEventListener("mouseenter", closeAllMenus);
+      }
+    });
+
+  });
+</script>
+
+<!-- [Accordéons Méga Menu Formations] -->
+<style>
+  [data-mm-acc-toggle] { display: flex; justify-content: space-between; align-items: center; gap: 2rem; cursor: pointer; user-select: none; }
+  [data-mm-acc]:not(.is-open) { padding-bottom: 1.5rem; }
+  [data-mm-acc]:not(.is-open) [data-mm-acc-body] { display: none; }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var items = document.querySelectorAll("[data-mm-acc]");
+    if (!items.length) return;
+    function setState(item, open) {
+      item.classList.toggle("is-open", open);
+      var toggle = item.querySelector("[data-mm-acc-toggle]");
+      var icon = item.querySelector(".mm-acc-icon");
+      if (toggle) toggle.setAttribute("aria-expanded", open);
+      if (icon) icon.textContent = open ? "−" : "+";
+    }
+    items.forEach(function (item) {
+      setState(item, false);
+      var toggle = item.querySelector("[data-mm-acc-toggle]");
+      if (!toggle) return;
+      toggle.setAttribute("role", "button");
+      toggle.setAttribute("tabindex", "0");
+      function onToggle(e) {
+        e.preventDefault();
+        var open = !item.classList.contains("is-open");
+        items.forEach(function (o) { setState(o, false); });
+        if (open) setState(item, true);
+      }
+      toggle.addEventListener("click", onToggle);
+      toggle.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") onToggle(e); });
+    });
+  });
+</script>
+
+
+<!-- [Color Background Menu] -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.querySelector(".nav_component");
+
+    function toggleNavClass() {
+      if (window.scrollY > 30) {
+        nav.classList.add("nav_scrolled");
+      } else {
+        nav.classList.remove("nav_scrolled");
+      }
+    }
+
+    window.addEventListener("scroll", toggleNavClass);
+    toggleNavClass();
+  });
+</script>
+
+
+<!-- [Accordeon Footer] -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(faq => {
+      const cta = faq.querySelector(".cta-faq-item");
+      const content = faq.querySelector(".bottom-faq-item");
+
+      // Initialisation : cacher tout en JS
+      gsap.set(content, {
+        height: 0,
+        opacity: 0,
+        overflow: "hidden",
+        pointerEvents: "none"
+      });
+
+      faq.dataset.open = "false";
+
+      cta.addEventListener("click", () => {
+        const isOpen = faq.dataset.open === "true";
+
+        if (isOpen) {
+          // Fermer l'item cliqué si déjà ouvert
+          closeItem(faq);
+        } else {
+          // Fermer tous les autres
+          faqItems.forEach(other => {
+            if (other !== faq && other.dataset.open === "true") {
+              closeItem(other);
+            }
+          });
+
+          // Ouvrir celui cliqué
+          openItem(faq);
+        }
+      });
+    });
+
+    function openItem(faq) {
+      const content = faq.querySelector(".bottom-faq-item");
+      const autoHeight = content.scrollHeight;
+
+      gsap.to(content, {
+        height: autoHeight,
+        opacity: 1,
+        duration: 0.4,
+        ease: "power2.out",
+        onStart: () => {
+          content.style.pointerEvents = "auto";
+          faq.dataset.open = "true";
+        }
+      });
+    }
+
+    function closeItem(faq) {
+      const content = faq.querySelector(".bottom-faq-item");
+
+      gsap.to(content, {
+        height: 0,
+        opacity: 0,
+        duration: 0.3,
+        ease: "power2.inOut",
+        onComplete: () => {
+          content.style.pointerEvents = "none";
+          faq.dataset.open = "false";
+        }
+      });
+    }
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.querySelector(".loader");
+
+  // ✅ Vérifie si on est sur la page d'accueil EN (et uniquement celle-ci)
+  const path = window.location.pathname;
+  const isEnglishHome = path === "/en" || path === "/en/";
+
+  if (loader && isEnglishHome) {
+    loader.style.display = "none";
+  }
+
+  // ✅ Si changement de langue vers l'anglais, on masque aussi le loader
+  document.addEventListener("webflow:locale:change", (event) => {
+    if (event.detail?.locale === "en" && isEnglishHome && loader) {
+      loader.style.display = "none";
+    }
+  });
+});
+</script>

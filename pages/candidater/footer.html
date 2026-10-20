@@ -1,0 +1,85 @@
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<!-- Langue FR -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    flatpickr(".custom-date-input", {
+      dateFormat: "d/m/Y", // Format JJ/MM/AAAA
+      locale: "fr"         // Activation de la langue française
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const uploads = [
+      {
+        selector: '.upload-notes',
+        labelText: 'Relevé de notes de la dernière année d\'études'
+      },
+      {
+        selector: '.upload-diplomes',
+        labelText: 'Diplômes obtenus'
+      },
+      {
+        selector: '.upload-cv',
+        labelText: 'Curriculum Vitae'
+      },
+      {
+        selector: '.upload-portfolio',
+        labelText: 'Portfolio'
+      }
+    ];
+
+    // Ton icône SVG personnalisée (tu peux la remplacer ici)
+    const customSVG = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>`;
+
+    uploads.forEach(upload => {
+      const container = document.querySelector(upload.selector);
+      if (!container) return;
+
+      const fileInput = container.querySelector('input[type="file"]');
+      const defaultLabel = container.querySelector('.w-file-upload-default .w-file-upload-label');
+      const successLabel = container.querySelector('.w-file-upload-success .w-file-upload-file-name');
+      const removeButton = container.querySelector('.w-file-remove-link');
+
+      // Fonction pour insérer l’icône + le texte dans le label
+      function setLabelContent() {
+        if (defaultLabel) {
+          defaultLabel.innerHTML = `${customSVG}<span class="custom-upload-text">${upload.labelText}</span>`;
+        }
+      }
+
+      // Initialisation
+      setLabelContent();
+
+      // Quand un fichier est sélectionné
+      if (fileInput) {
+        fileInput.addEventListener('change', function () {
+          const fileName = fileInput.files[0]?.name;
+          if (successLabel && fileName) {
+            successLabel.textContent = fileName;
+          }
+        });
+      }
+
+      // Quand un fichier est supprimé (croix)
+      if (removeButton) {
+        removeButton.addEventListener('click', function () {
+          setTimeout(() => {
+            setLabelContent();
+          }, 100);
+        });
+      }
+    });
+  });
+</script>
