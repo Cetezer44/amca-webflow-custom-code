@@ -25,6 +25,9 @@ Le code propre à une page ne s'exécute que sur elle : le JS teste `data-wf-pag
 - Les balises `<video>` des embeds de l'accueil et de /les-formations, sans leur ancien `<style>`.
 - Les JSON-LD (Page settings › Schema markup) : celui du template Stages utilise des champs CMS, que seul Webflow peut remplir.
 - Les pages en brouillon (Style Guide, Components…) et la page mot de passe, non concernées.
+- Le `noindex` des 4 pages de confirmation (« merci ») : `<meta name="robots" content="noindex, follow">` dans Page settings › Custom code › Inside `<head>`. Webflow n'a pas de réglage natif, et la balise doit être dans le HTML servi pour que Google la lise. Ces pages sont aussi exclues du sitemap (action 2.4 du plan Waisso).
+- La canonical globale (Site settings › SEO › Global canonical tag URL : `https://www.amcaparis.com`), action 2.2.
+- Les redirections 301 (Site settings › Publishing) : la liste annotée est dans `webflow/redirects-301.csv`.
 
 ### Mettre à jour le code
 
