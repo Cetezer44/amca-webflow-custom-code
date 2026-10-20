@@ -20,9 +20,16 @@ Le code propre à une page ne s'exécute que sur elle : le JS teste `data-wf-pag
 
 ### Ce qui reste volontairement dans Webflow
 
-- Les balises de chargement (`Site settings › Custom code`) : `amca.min.css`, `amca.min.js`, Finsweet Attributes et les bibliothèques tierces (Vimeo, jQuery, jQuery UI, Easing, Finsweet Autovideo).
+- Les balises de chargement (`Site settings › Custom code › Head code`) : `amca.min.css` et `amca.min.js`. Le Footer code ne contient plus qu'un commentaire : Vimeo Player, jQuery 3.7.1 (doublon du jQuery de Webflow), jQuery UI, jQuery Easing et Finsweet Autovideo ont été retirés le 20/10/2026 (inutilisés). Finsweet Attributes est chargé par `amca.min.js`, seulement sur les pages qui ont une liste (`src/js/site/finsweet-list.js`).
 - Les icônes SVG des embeds : elles font partie du rendu HTML. Injectées en JS, elles apparaîtraient après le chargement.
-- Les balises `<video>` des embeds de l'accueil et de /les-formations, sans leur ancien `<style>`.
+- Les balises `<video>` des embeds de l'accueil (bandeau, showreel, campus) et de /les-formations (bandeau). Elles n'ont ni `src` ni `autoplay` : `src/js/site/lazy-videos.js` pose la source quand la vidéo approche de l'écran (ou après le chargement de la page pour les bandeaux), en 720p sur mobile. Modèle :
+  ```html
+  <video muted loop playsinline preload="none" poster="https://cetestudio.b-cdn.net/AMCA/<nom>-poster.webp"
+         data-amca-src="https://cetestudio.b-cdn.net/AMCA/<nom>-1080.mp4"
+         data-amca-src-mobile="https://cetestudio.b-cdn.net/AMCA/<nom>-720.mp4"
+         data-amca-autoplay data-amca-load="visible|idle" style="…"></video>
+  ```
+  Les vidéos sont hébergées sur Bunny (`cetestudio.b-cdn.net/AMCA/`). Réglages d'encodage : `docs/performance/videos.md`.
 - Les JSON-LD (Page settings › Schema markup) : celui du template Stages utilise des champs CMS, que seul Webflow peut remplir.
 - Les pages en brouillon (Style Guide, Components…) et la page mot de passe, non concernées.
 - Le `noindex` des 4 pages de confirmation (« merci ») : `<meta name="robots" content="noindex, follow">` dans Page settings › Custom code › Inside `<head>`. Webflow n'a pas de réglage natif, et la balise doit être dans le HTML servi pour que Google la lise. Ces pages sont aussi exclues du sitemap (action 2.4 du plan Waisso).
@@ -42,7 +49,7 @@ Puis, dans Webflow › Site settings › Custom code › Head code, remplacer l'
 
 La version est figée par commit : jsDelivr met ces fichiers en cache sans limite, donc une URL ne change jamais de contenu. Pour revenir en arrière, il suffit de remettre l'empreinte précédente dans Webflow.
 
-Version en ligne : commit `5bcbf37476e96d01f93cda2af13cc5b2e950d2bb` (v1.0.0, 20/10/2026).
+Version en ligne : voir les 2 URL du Head code (commit `9990c8a` au 20/10/2026, actions 3.1–3.2).
 
 ## Historique de l'export
 
