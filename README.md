@@ -1,10 +1,51 @@
 # AMCA — Custom code Webflow
 
-Sauvegarde versionnée de tout le code personnalisé du site **amcaparis.com** (Webflow, site `6891bc152fe7a0afbf69072a`), exporté le **20/10/2026**, avant les corrections SEO de l'audit Waisso du 14/10/2026.
+Code personnalisé du site **amcaparis.com** (Webflow, site `6891bc152fe7a0afbf69072a`).
 
-Ce premier commit est une **copie conforme** de ce qui est en ligne : rien n'a été corrigé ni reformaté. Les corrections de l'audit feront l'objet de commits séparés, pour garder un historique lisible et pouvoir revenir en arrière.
+**Ce dépôt est la source du code.** Webflow ne contient plus que les balises qui chargent les fichiers de `dist/`, servis par jsDelivr. On ne remet pas de code dans Webflow : on modifie `src/`, on rebuild, on pousse, puis on met à jour la version dans Webflow.
 
-## Arborescence
+## Fonctionnement
+
+| Fichier | Rôle |
+|---|---|
+| `src/js/main.js` | Point d'entrée : lance le code commun, puis le code propre à la page en cours |
+| `src/js/site/`, `src/js/components/` | Code exécuté sur toutes les pages (méga-menu, header, FAQ, Cookiebot, gtag, bloc Portes ouvertes…) |
+| `src/js/pages/` | Code propre à certaines pages (accueil, BTS, spécialisations, formulaires, modales…) |
+| `src/css/site/`, `src/css/pages/` | Styles communs et styles propres à certaines pages |
+| `src/pages.js` | Identifiants Webflow des pages (`data-wf-page`) et groupes de pages |
+| `build.mjs` | Build : `dist/amca.min.js` et `dist/amca.min.css` |
+| `dist/` | Fichiers servis au site, à committer après chaque build |
+
+Le code propre à une page ne s'exécute que sur elle : le JS teste `data-wf-page`, et le CSS est limité par `:where(html[data-wf-page="…"])`, qui ne change pas la spécificité des règles. Chaque module tourne isolé : une erreur dans l'un s'affiche dans la console (`[AMCA] …`) sans bloquer les autres.
+
+### Ce qui reste volontairement dans Webflow
+
+- Les balises de chargement (`Site settings › Custom code`) : `amca.min.css`, `amca.min.js`, Finsweet Attributes et les bibliothèques tierces (Vimeo, jQuery, jQuery UI, Easing, Finsweet Autovideo).
+- Les icônes SVG des embeds : elles font partie du rendu HTML. Injectées en JS, elles apparaîtraient après le chargement.
+- Les balises `<video>` des embeds de l'accueil et de /les-formations, sans leur ancien `<style>`.
+- Les JSON-LD (Page settings › Schema markup) : celui du template Stages utilise des champs CMS, que seul Webflow peut remplir.
+- Les pages en brouillon (Style Guide, Components…) et la page mot de passe, non concernées.
+
+### Mettre à jour le code
+
+```bash
+npm install          # la première fois
+# modifier src/…
+npm run build
+git add -A && git commit -m "…" && git push
+```
+
+Puis, dans Webflow › Site settings › Custom code › Head code, remplacer l'empreinte du commit dans les **2 URL** (`…@<commit>/dist/amca.min.css` et `…@<commit>/dist/amca.min.js`) par celle du nouveau commit (`git rev-parse HEAD`), et publier.
+
+La version est figée par commit : jsDelivr met ces fichiers en cache sans limite, donc une URL ne change jamais de contenu. Pour revenir en arrière, il suffit de remettre l'empreinte précédente dans Webflow.
+
+Version en ligne : commit `5bcbf37476e96d01f93cda2af13cc5b2e950d2bb` (v1.0.0, 20/10/2026).
+
+## Historique de l'export
+
+Le premier commit du dépôt est une **copie conforme** du code tel qu'il était dans Webflow le 20/10/2026, avant les corrections SEO de l'audit Waisso du 14/10/2026. Les dossiers `site/`, `pages/`, `cms-templates/` et `embeds/` gardent cette trace : ils documentent l'ancien emplacement de chaque code et **ne sont plus chargés par le site**.
+
+## Arborescence de l'export d'origine
 
 | Dossier | Contenu | Où le trouver dans Webflow |
 |---|---|---|
@@ -41,6 +82,6 @@ Les blocs identiques d'une page à l'autre sont conservés en double, comme dans
 - **Cookiebot** est injecté 3 s après le `load` de la page.
 - Les vidéos du showreel et du campus sont servies depuis `cetestudio.b-cdn.net` (embeds de l'accueil).
 
-## Mettre à jour ce dépôt
+## Règle de travail
 
-Le code fait foi dans Webflow. Après chaque modification dans Webflow, reporter le changement ici dans un commit qui indique la page ou le composant concerné et l'action de l'audit correspondante.
+Le code fait foi dans ce dépôt (voir « Mettre à jour le code »). Seuls les JSON-LD (`cms-templates/`, `pages/accueil/schema-jsonld*`) se modifient encore dans Webflow : reporter ici chaque changement dans un commit qui indique la page concernée et l'action de l'audit correspondante.
