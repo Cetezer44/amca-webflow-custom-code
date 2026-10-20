@@ -1,0 +1,22 @@
+{
+  "name": "amca-webflow-custom-code",
+  "version": "1.0.0",
+  "description": "Custom code du site Webflow amcaparis.com",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cetezer44/amca-webflow-custom-code.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cetezer44/amca-webflow-custom-code/issues"
+  },
+  "homepage": "https://github.com/Cetezer44/amca-webflow-custom-code#readme",
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "lightningcss": "^1.33.0"
+  },
+  "private": true,
+  "type": "module"
+}

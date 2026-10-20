@@ -1,0 +1,6 @@
+/* Accordéons du méga-menu Formations.
+   Origine : Site settings › Footer code */
+
+  [data-mm-acc-toggle] { display: flex; justify-content: space-between; align-items: center; gap: 2rem; cursor: pointer; user-select: none; }
+  [data-mm-acc]:not(.is-open) { padding-bottom: 1.5rem; }
+  [data-mm-acc]:not(.is-open) [data-mm-acc-body] { display: none; }

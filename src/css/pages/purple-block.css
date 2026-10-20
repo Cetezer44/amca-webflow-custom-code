@@ -1,0 +1,20 @@
+/* Marges du bloc violet selon la largeur.
+   Origine : Embed « media-query-image-purple-block » */
+
+@media (max-width: 1070px) {
+  .purple_block_ecole {
+    margin-left:7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .purple_block_ecole {
+    margin-left:2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .purple_block_ecole {
+    margin-left:0rem;
+  }
+}

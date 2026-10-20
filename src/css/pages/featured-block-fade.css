@@ -1,0 +1,10 @@
+/* Apparition du bloc actualité formations.
+   Origine : Embed « anim-block-formations » */
+
+  .featured_actu_block_formations {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .featured_actu_block_formations.is-visible {
+    opacity: 1;
+  }

@@ -1,0 +1,10 @@
+/* Bloc « Portes ouvertes » fixe.
+   Origine : Composant « Portes Ouvertes Fixe » */
+
+  .featured_actu_block_portes_ouvertes_fixed {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .featured_actu_block_portes_ouvertes_fixed.is-visible {
+    opacity: 1;
+  }

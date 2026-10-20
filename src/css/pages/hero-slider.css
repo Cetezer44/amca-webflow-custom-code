@@ -1,0 +1,12 @@
+/* Slider hero en fondu.
+   Origine : Embed « slider-fade-embed » */
+
+  .slider-hero-hp .img-amca {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    will-change: opacity;
+  }
+  .slider-hero-hp .img-amca.is-active {
+    opacity: 1;
+    z-index: 1;
+  }

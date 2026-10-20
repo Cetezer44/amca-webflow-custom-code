@@ -1,0 +1,130 @@
+// Page BTS : ancres avec offset, onglets, accordéons, ouverture du dossier PDF à l’envoi du formulaire.
+// Origine : /specialisations/bts-audiovisuel-option-montage-postproduction › Before </body>
+import { ready } from '../utils/ready.js';
+
+export default function bts() {
+  ready(function () {
+    /* --- Liens d'ancres : scroll doux avec un offset de 100px --- */
+    var ANCHOR_OFFSET = 100;
+    /* Durée du scroll (ms) : proportionnelle à la distance, entre MIN et MAX */
+    var MIN_DURATION = 1000;
+    var MAX_DURATION = 1800;
+    var bar = document.querySelector(".bts-toolbar-bottom");
+    var navLinks = document.querySelectorAll(".bts-toolbar-tab");
+    /* Offset de 100px, augmenté si besoin pour que le titre ne passe pas sous la barre sticky (tablette / mobile) */
+    function offset(target) {
+      var off = ANCHOR_OFFSET;
+      if (bar && target) {
+        var barEnd = (parseFloat(getComputedStyle(bar).top) || 0) + bar.offsetHeight + 16;
+        var pad = parseFloat(getComputedStyle(target).paddingTop) || 0;
+        off = Math.max(off, barEnd - pad);
+      }
+      return off;
+    }
+    var scrollAnim = null;
+    function easeInOutCubic(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+    function smoothScrollTo(to) {
+      if (scrollAnim) cancelAnimationFrame(scrollAnim);
+      var start = window.scrollY, change = to - start, startTime = null;
+      var duration = Math.min(MAX_DURATION, Math.max(MIN_DURATION, Math.abs(change) * 0.35));
+      function step(now) {
+        if (startTime === null) startTime = now;
+        var t = Math.min((now - startTime) / duration, 1);
+        window.scrollTo(0, start + change * easeInOutCubic(t));
+        scrollAnim = t < 1 ? requestAnimationFrame(step) : null;
+      }
+      scrollAnim = requestAnimationFrame(step);
+    }
+    /* Interrompt l'animation si l'utilisateur scrolle lui-même */
+    ["wheel", "touchstart", "keydown"].forEach(function (evt) {
+      window.addEventListener(evt, function () { if (scrollAnim) { cancelAnimationFrame(scrollAnim); scrollAnim = null; } }, { passive: true });
+    });
+    function targetFromLink(link) {
+      var id = link.getAttribute("data-target");
+      if (!id) {
+        if (!link.hash || link.pathname.replace(/\/$/, "") !== location.pathname.replace(/\/$/, "")) return null;
+        id = decodeURIComponent(link.hash.slice(1));
+      }
+      return id ? document.getElementById(id) : null;
+    }
+    /* Phase de capture : prend le pas sur le scroll natif de Webflow */
+    document.addEventListener("click", function (e) {
+      var link = e.target.closest ? e.target.closest("a[href*='#'], .bts-toolbar-tab") : null;
+      if (!link) return;
+      var target = targetFromLink(link);
+      if (!target) return;
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      smoothScrollTo(target.getBoundingClientRect().top + window.scrollY - offset(target));
+    }, true);
+    function updateActiveLink() {
+      var current = null, closest = Infinity;
+      navLinks.forEach(function (link) {
+        var s = document.getElementById(link.getAttribute("data-target"));
+        if (!s) return;
+        var top = s.getBoundingClientRect().top - offset(s) - 2;
+        if (top <= 0 && Math.abs(top) < closest) { closest = Math.abs(top); current = link; }
+      });
+      navLinks.forEach(function (l) { l.classList.remove("active"); });
+      if (current) current.classList.add("active");
+    }
+    window.addEventListener("scroll", updateActiveLink, { passive: true });
+    window.addEventListener("resize", updateActiveLink);
+    updateActiveLink();
+
+    /* --- Onglets de contenu (affichage au clic) --- */
+    document.querySelectorAll("[data-bts-tabs]").forEach(function (group) {
+      var links = group.querySelectorAll("[data-bts-tab]");
+      var panels = group.querySelectorAll("[data-bts-panel]");
+      function activate(key) {
+        links.forEach(function (l) { var on = l.getAttribute("data-bts-tab") === key; l.classList.toggle("is-active", on); l.setAttribute("aria-selected", on); });
+        panels.forEach(function (p) { p.classList.toggle("is-active", p.getAttribute("data-bts-panel") === key); });
+      }
+      links.forEach(function (l) {
+        l.setAttribute("role", "tab");
+        l.addEventListener("click", function (e) { e.preventDefault(); activate(this.getAttribute("data-bts-tab")); });
+      });
+      if (links.length) activate(links[0].getAttribute("data-bts-tab"));
+    });
+
+    /* --- Accordéons (programme + FAQ) --- */
+    document.querySelectorAll(".bts-acc").forEach(function (acc) {
+      var items = acc.querySelectorAll("[data-bts-acc]");
+      function setState(item, open) {
+        item.classList.toggle("is-open", open);
+        var head = item.querySelector("[data-bts-acc-toggle]");
+        var icon = item.querySelector(".bts-acc-icon");
+        if (head) head.setAttribute("aria-expanded", open);
+        if (icon) icon.textContent = open ? "−" : "+";
+      }
+      items.forEach(function (item, i) {
+        setState(item, i === 0);
+        item.querySelector("[data-bts-acc-toggle]").addEventListener("click", function (e) {
+          e.preventDefault();
+          var open = !item.classList.contains("is-open");
+          items.forEach(function (o) { setState(o, false); });
+          if (open) setState(item, true);
+        });
+      });
+    });
+
+    /* --- Formulaire : ouverture du dossier de candidature (PDF) à l'envoi --- */
+    var PDF_URL = "https://cdn.prod.website-files.com/6891bc152fe7a0afbf69072a/6ac2762cf973fcb3fb32d317_Dossier%20de%20candidature%20AMCA.pdf";
+    var form = document.querySelector("#candidature form");
+    if (form) {
+      var success = form.parentElement.querySelector(".w-form-done");
+      /* Lien de secours dans le message de confirmation (si le navigateur bloque l'ouverture) */
+      if (success && !success.querySelector(".bts-pdf-link")) {
+        var p = document.createElement("p");
+        p.style.marginTop = "1rem";
+        p.innerHTML = '<a class="bts-pdf-link bts-link-inline" href="' + PDF_URL + '" target="_blank" rel="noopener">→ Ouvrir le dossier de candidature (PDF)</a>';
+        success.appendChild(p);
+      }
+      /* Ouverture dans un nouvel onglet au moment de l'envoi, uniquement si le formulaire est valide */
+      form.addEventListener("submit", function () {
+        if (typeof form.checkValidity === "function" && !form.checkValidity()) return;
+        window.open(PDF_URL, "_blank", "noopener");
+      });
+    }
+  });
+}

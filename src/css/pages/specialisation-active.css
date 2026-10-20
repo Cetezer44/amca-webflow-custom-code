@@ -1,0 +1,6 @@
+/* Lien actif de la barre de navigation.
+   Origine : Embed « menu-active » (spécialisations) */
+
+.active {
+background-color : rgba(241, 188, 223, 0.22);
+}

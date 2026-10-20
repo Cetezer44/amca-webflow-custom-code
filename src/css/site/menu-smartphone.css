@@ -1,0 +1,10 @@
+/* Lien courant du menu smartphone.
+   Origine : Composant « Menu Smartphone » */
+
+  
+.w--current {
+
+  color:#bdbafb;
+  text-decoration:underline;
+
+}

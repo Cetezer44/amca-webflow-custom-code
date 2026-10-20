@@ -1,0 +1,6 @@
+/* Vidéo showreel sans contrôles iOS.
+   Origine : Embed « showreel-embed » */
+
+.showreel_background video::-webkit-media-controls {
+    display: none !important; /* Supprime les contrôles sur iOS */
+  }

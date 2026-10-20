@@ -1,0 +1,4 @@
+/* Désactive le scroll natif (remplacé par le script de la barre de navigation).
+   Origine : Pages spécialisations › Inside <head> */
+
+& { scroll-behavior: auto; /* désactive le scroll smooth natif Webflow */ }

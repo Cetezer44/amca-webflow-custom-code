@@ -1,0 +1,16 @@
+/* Vidéo campus : bouton play et filtre.
+   Origine : Embed « campus-video-embed » (accueil) */
+
+.showreel_background video::-webkit-media-controls {
+    display: none !important; /* Supprime les contrôles sur iOS */
+  }
+  
+.icon-play, .filter {
+    transition: opacity 0.5s ease;
+  }
+
+.icon-play.fade-out,
+.filter.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }

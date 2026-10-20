@@ -1,0 +1,35 @@
+/* Bandeau d’infos défilant.
+   Origine : Embed « embed-marquee » */
+
+/* ====== Conteneur ====== */
+.bandeau-marquee-infos {
+  position: relative;
+  overflow-x: auto;                 /* scroll horizontal tactile */
+  -webkit-overflow-scrolling: touch;/* inertie iOS */
+  scrollbar-width: none;            /* masque la scrollbar (Firefox) */
+  white-space: nowrap;              /* sécurité si styles externes */
+}
+.bandeau-marquee-infos::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+/* ====== Rail interne (créé en JS) ====== */
+.bandeau-marquee-infos .marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Items */
+.bandeau-marquee-infos .marquee-text-bandeau-infos {
+  flex: 0 0 auto;
+  min-width: 300px;    /* ajuste à ton design */
+  margin-right: 1rem;  /* espacement horizontal */
+}
+
+/* Animation auto uniquement ≥ 768px */
+@media (min-width: 768px) {
+  .bandeau-marquee-infos .marquee-track {
+    animation: marquee-infos 40s linear infinite;
+  }
+}
+
+/* @keyframes marquee-infos : voir src/css/site/keyframes.css (une règle @keyframes ne peut pas être ciblée par page) */

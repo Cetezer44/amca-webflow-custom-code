@@ -1,0 +1,8 @@
+/* Animations partagées.
+   Origine : embed « embed-marquee » (accueil, /les-formations) */
+
+/* La durée (40s) est à ajuster selon la longueur de contenu */
+@keyframes marquee-infos {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); } /* 3 copies → -33.333% */
+}
