@@ -10,6 +10,8 @@ import navScroll from './site/nav-scroll.js';
 import faqAccordion from './site/faq-accordion.js';
 import loaderEn from './site/loader-en.js';
 import portesOuvertesFixe from './components/portes-ouvertes-fixe.js';
+import lazyVideos from './site/lazy-videos.js';
+import finsweetList from './site/finsweet-list.js';
 
 import followMouseImages from './pages/follow-mouse-images.js';
 import horizontalScroll from './pages/horizontal-scroll.js';
@@ -45,6 +47,8 @@ run('navScroll', navScroll);
 run('faqAccordion', faqAccordion);
 run('loaderEn', loaderEn);
 run('portesOuvertesFixe', portesOuvertesFixe);
+run('lazyVideos', lazyVideos);
+run('finsweetList', finsweetList);
 
 // Accueil et /les-formations
 if (on(G.accueilEtFormations)) {
