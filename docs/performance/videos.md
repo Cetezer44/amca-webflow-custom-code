@@ -1,6 +1,7 @@
 # Vidéos du site (action 3.1)
 
 Hébergement : Bunny, `https://cetestudio.b-cdn.net/AMCA/`. Les originaux restent en ligne sous leur ancien nom.
+Les posters (`.webp`) sont aussi hébergés par Webflow (assets `6ad781da7f5d5d50523ce532` et `6ad781daa937cc922484bc9c`) : ce sont ces URL `cdn.prod.website-files.com` qu'utilisent les embeds, pour éviter une connexion à un domaine tiers avant l'affichage.
 
 | Fichier | Avant | 1080p | 720p (mobile) | Poster |
 |---|---|---|---|---|
