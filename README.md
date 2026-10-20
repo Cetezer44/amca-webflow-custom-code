@@ -10,7 +10,8 @@ Ce premier commit est une **copie conforme** de ce qui est en ligne : rien n'a �
 |---|---|---|
 | `site/head.html`, `site/footer.html` | Code global (Finsweet Attributes, Cookiebot, gtag Google Ads, Vimeo, jQuery, méga-menu, accordéons, couleur du menu au scroll, loader EN) | Site settings › Custom code › Head code / Footer code |
 | `pages/<page>/head.html`, `footer.html` | Code propre à une page (12 pages) | Page settings › Custom code › Inside `<head>` / Before `</body>` |
-| `cms-templates/stages/schema-jsonld.html` | JSON-LD `Course` du template Stages | Template Stages › Page settings › Schema markup |
+| `cms-templates/stages/schema-jsonld.html` (+ `.en.html`) | JSON-LD `Course` du template Stages, FR et EN | Template Stages › Page settings › Schema markup (locale FR / EN) |
+| `pages/accueil/schema-jsonld.html` (+ `.en.html`) | JSON-LD de l'école (`EducationalOrganization`, `WebSite`, `WebPage`), FR et EN | Accueil › Page settings › Schema markup (locale FR / EN) |
 | `embeds/pages/<page>/` | Embeds HTML placés directement dans les pages (164) | Designer › élément « Code Embed » de la page |
 | `embeds/components/<composant>/` | Embeds HTML placés dans les composants (72) : header, méga-menus, footer, FAQ… | Designer › Components › composant concerné |
 
@@ -34,7 +35,8 @@ Les blocs identiques d'une page à l'autre sont conservés en double, comme dans
 
 ## Points relevés pendant l'export
 
-- **JSON-LD des stages cassé** : un guillemet en trop après la valeur de `name` (`… }}"",`) rend le JSON invalide sur les 17 pages stages. C'est le défaut « JSON-LD cassé » de l'audit (action 4 du plan). Laissé tel quel ici, à corriger dans un commit dédié.
+- **JSON-LD des stages** : un guillemet en trop après `name` rendait le JSON invalide sur toutes les fiches stages (action 4 de l'audit). Corrigé le 20/10/2026, voir l'historique.
+- **Champs dynamiques dans le JSON-LD** : l'API Webflow refuse d'écrire un schema contenant des champs CMS (`{{wf …\} }}`). Un schema dynamique se modifie donc dans le Designer (Page settings › Schema markup, avec « Add field »). Les schemas statiques passent par l'API.
 - **Scripts tiers au chargement** (action 7 du plan, performance) : jQuery + jQuery UI + jQuery Easing, Vimeo Player, Finsweet Attributes (×2), GSAP, Flatpickr, gtag, Cookiebot. Ce dépôt sert de base à l'inventaire demandé par l'audit.
 - **Cookiebot** est injecté 3 s après le `load` de la page.
 - Les vidéos du showreel et du campus sont servies depuis `cetestudio.b-cdn.net` (embeds de l'accueil).

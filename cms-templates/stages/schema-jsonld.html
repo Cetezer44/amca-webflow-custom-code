@@ -2,11 +2,13 @@
 {
   "@context": "https://schema.org",
   "@type": "Course",
-  "name": "{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}"",
+  "inLanguage": "fr",
+  "name": "{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
   "description": "{{wf {&quot;path&quot;:&quot;meta-description&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
   "url": "https://www.amcaparis.com/stages/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
   "provider": {
-    "@type": "Organization",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.amcaparis.com/#organization",
     "name": "AMCA Paris",
     "url": "https://www.amcaparis.com"
   },
@@ -19,7 +21,8 @@
   "hasCourseInstance": {
     "@type": "CourseInstance",
     "courseMode": "Onsite",
-    "courseWorkload": "PT{{wf {&quot;path&quot;:&quot;duree-en-heures&quot;,&quot;type&quot;:&quot;Number&quot;\} }}H"
+    "courseWorkload": "PT{{wf {&quot;path&quot;:&quot;duree-en-heures&quot;,&quot;type&quot;:&quot;Number&quot;\} }}H",
+    "location": {"@type": "Place", "name": "AMCA Paris", "address": {"@type": "PostalAddress", "streetAddress": "19 rue de Cambrai, Bâtiment 26", "postalCode": "75019", "addressLocality": "Paris", "addressCountry": "FR"}}
   }
 }
 </script>
