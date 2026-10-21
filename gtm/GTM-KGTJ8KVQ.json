@@ -1,0 +1,64 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-10-21 11:00:00",
+  "containerVersion": {
+    "path": "accounts/6383951126/containers/267923156/versions/0",
+    "accountId": "6383951126",
+    "containerId": "267923156",
+    "containerVersionId": "0",
+    "container": {
+      "path": "accounts/6383951126/containers/267923156",
+      "accountId": "6383951126",
+      "containerId": "267923156",
+      "name": "www.amcaparis.com",
+      "publicId": "GTM-KGTJ8KVQ",
+      "usageContext": ["WEB"]
+    },
+    "tag": [
+      {
+        "accountId": "6383951126",
+        "containerId": "267923156",
+        "tagId": "1",
+        "name": "Google tag - GA4 (G-YNS9HSCPNT)",
+        "type": "googtag",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "tagId", "value": "G-YNS9HSCPNT" }
+        ],
+        "firingTriggerId": ["2147479573"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": { "type": "MAP" },
+        "consentSettings": { "consentStatus": "NOT_SET" }
+      },
+      {
+        "accountId": "6383951126",
+        "containerId": "267923156",
+        "tagId": "2",
+        "name": "Google tag - Google Ads (AW-17492061884)",
+        "type": "googtag",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "tagId", "value": "AW-17492061884" }
+        ],
+        "firingTriggerId": ["2147479573"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": { "type": "MAP" },
+        "consentSettings": { "consentStatus": "NOT_SET" }
+      },
+      {
+        "accountId": "6383951126",
+        "containerId": "267923156",
+        "tagId": "3",
+        "name": "Conversion Linker",
+        "type": "gclidw",
+        "parameter": [
+          { "type": "BOOLEAN", "key": "enableCrossDomain", "value": "false" },
+          { "type": "BOOLEAN", "key": "enableUrlPassthrough", "value": "false" },
+          { "type": "BOOLEAN", "key": "enableCookieOverrides", "value": "false" }
+        ],
+        "firingTriggerId": ["2147479553"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": { "type": "MAP" },
+        "consentSettings": { "consentStatus": "NOT_SET" }
+      }
+    ]
+  }
+}
