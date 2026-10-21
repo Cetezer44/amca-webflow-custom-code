@@ -22,7 +22,7 @@ Le code propre à une page ne s'exécute que sur elle : le JS teste `data-wf-pag
 
 - Les balises de chargement (`Site settings › Custom code › Head code`) : `amca.min.css` et `amca.min.js`. Le Footer code ne contient plus qu'un commentaire : Vimeo Player, jQuery 3.7.1 (doublon du jQuery de Webflow), jQuery UI, jQuery Easing et Finsweet Autovideo ont été retirés le 20/10/2026 (inutilisés). Finsweet Attributes est chargé par `amca.min.js`, seulement sur les pages qui ont une liste (`src/js/site/finsweet-list.js`).
 - Les icônes SVG des embeds : elles font partie du rendu HTML. Injectées en JS, elles apparaîtraient après le chargement.
-- Les balises `<video>` des embeds de l'accueil (bandeau, showreel, campus) et de /les-formations (bandeau). Elles n'ont ni `src` ni `autoplay` : `src/js/site/lazy-videos.js` pose la source quand la vidéo approche de l'écran (ou après le chargement de la page pour les bandeaux), en 720p sur mobile. Modèle :
+- Les balises `<video>` des embeds de l'accueil (bandeau, showreel, campus). Le bandeau de /les-formations est une image fixe (poster WebP, `fetchpriority="high"`) depuis le 21/10/2026, pour le LCP mobile. Elles n'ont ni `src` ni `autoplay` : `src/js/site/lazy-videos.js` pose la source quand la vidéo approche de l'écran (ou après le chargement de la page pour les bandeaux), en 720p sur mobile. Modèle :
   ```html
   <video muted loop playsinline preload="none" poster="https://cetestudio.b-cdn.net/AMCA/<nom>-poster.webp"
          data-amca-src="https://cetestudio.b-cdn.net/AMCA/<nom>-1080.mp4"
